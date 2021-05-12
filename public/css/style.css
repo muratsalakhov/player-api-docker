@@ -373,232 +373,316 @@ button.mini, input[type=submit].mini, .button.mini, .button:link.mini {
     padding: 0;
 }
 html, body, .body, #root {
-    height: 100%;
-    overflow: hidden;
-    margin: 0;
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
 }
 
 .App {
-    text-align: center;
-    max-height: 100vh;
-    overflow: auto;
+  text-align: center;
+  max-height: 100vh;
+  overflow: auto;
 }
 
 .App-header {
-    background-color: white;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: 16pt;
+  background-color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 16pt;
 }
 
 .playerContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
 
 .header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    background: #4791d3;
-    padding: 0 0 0.3rem 0.3rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: #4791d3;
+  padding: 0 0 0.3rem 0.3rem;
 }
 
 .task {
-    background: white;
-    border: 1px solid #ebebed;
-    border-radius: 0 0 4px 4px;
-    padding: 0.3rem 1rem;
-    width: 100%;
+  background: white;
+  border: 1px solid #ebebed;
+  border-radius: 0 0 4px 4px;
+  padding: 0.3rem 1rem;
+  width: 100%;
 }
 
 .buttonMenu {
-    color: white;
+  color: white;
 }
 
 .playerContainerRow {
-    display: flex;
-    flex-direction: row;
-    flex: 1;
-    min-height: 0;
-    position: relative;
-    background: #f3f3f3;
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  min-height: 0;
+  position: relative;
+  background: #f3f3f3;
 }
 
 .canvasContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    flex: 1;
-    align-items: center;
-    margin: auto;
-    overflow: visible;
-    width: 100%;
-    height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  align-items: center;
+  margin: auto;
+  overflow: visible;
+  width: 100%;
+  height: 100%;
 }
 
 .sidebarContainer {
-    width: 35px;
-    flex-shrink: 0;
-    overflow: visible;
-    background: white;
-    background-image: url('/img/help.png');
-    background-position: left 6px center;
-    background-repeat: no-repeat;
-    background-size: 24px;
-    border-left: 2px solid #ebebed;
-    -moz-transition: width 0.2s 0.02s ease,
+  width: 35px;
+  flex-shrink: 0;
+  overflow: visible;
+  background: white;
+  background-image: url('/img/help.png');
+  background-position: left 6px center;
+  background-repeat: no-repeat;
+  background-size: 24px;
+  border-left: 2px solid #ebebed;
+  -moz-transition: width 0.2s 0.02s ease,
     background-size 0.2s 0.02s ease,
     background-position 0.2s 0.02s ease;
-    -o-transition: width 0.2s 0.02s ease,
+  -o-transition: width 0.2s 0.02s ease,
     background-size 0.2s 0.02s ease,
     background-position 0.2s 0.02s ease;
-    -webkit-transition: width 0.2s 0.02s ease,
+  -webkit-transition: width 0.2s 0.02s ease,
     background-size 0.2s 0.02s ease,
     background-position 0.2s 0.02s ease;
-    transition: width 0.2s 0.02s ease,
+  transition: width 0.2s 0.02s ease,
     background-size 0.2s 0.02s ease,
     background-position 0.2s 0.02s ease;
 }
 
 .sidebarContainer:hover, .sidebarContainer.hover {
-    width: calc(300px + 2rem);
-    background-position: left 0 center;
-    background-size: 0;
+  width: calc(300px + 2rem);
+  background-position: left 0 center;
+  background-size: 0;
 }
 
 .sidebar {
-    width: 300px;
-    padding: 0.5rem 1rem 0.5rem calc(1rem + 35px);
-    -moz-transition: padding 0.2s 0.02s ease;
-    -o-transition: padding 0.2s 0.02s ease;
-    -webkit-transition: padding 0.02s 0.2s ease;
-    transition: padding 0.2s 0.02s ease;
+  width: 300px;
+  padding: 0.5rem 1rem 0.5rem calc(1rem + 35px);
+  -moz-transition: padding 0.2s 0.02s ease;
+  -o-transition: padding 0.2s 0.02s ease;
+  -webkit-transition: padding 0.02s 0.2s ease;
+  transition: padding 0.2s 0.02s ease;
 }
 
 .sidebarContainer:hover .sidebar, .sidebarContainer.hover .sidebar {
-    padding: 0.5rem 1rem;
+  padding: 0.5rem 1rem;
 }
 
 canvas {
-    background: transparent;
-    object-fit: contain;
-    max-width: 100%;
-    max-height: 100%;
-    margin: auto;
+  background: transparent;
+  object-fit: contain;
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
 }
 
 .mistakeIndicator {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 0;
-    height: 0;
-    box-shadow: inset 0 0 5vw red;
-    pointer-events: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  box-shadow: inset 0 0 5vw red;
+  pointer-events: none;
 }
 
 .error {
-    width: 100%;
-    height: 100%;
-    -webkit-animation: errorBlink 0.7s linear infinite;
-    animation: errorBlink 0.7s linear infinite;
-    box-shadow: inset 0 0 7vw rgba(255, 255, 127, 0.0);
+  width: 100%;
+  height: 100%;
+  -webkit-animation: errorBlink 0.7s linear infinite;
+  animation: errorBlink 0.7s linear infinite;
+  box-shadow: inset 0 0 7vw rgba(255, 255, 127, 0.0);
 }
 @-webkit-keyframes errorBlink {
-    0% { box-shadow: inset 0 0 7vw rgba(255, 54, 54, 1); }
-    70% { box-shadow: inset 0 0 7vw rgba(255, 54, 54, 0.6); }
-    100% { box-shadow: inset 0 0 7vw rgba(255, 255, 127, 0.0); }
+  0% { box-shadow: inset 0 0 7vw rgba(255, 54, 54, 1); }
+  70% { box-shadow: inset 0 0 7vw rgba(255, 54, 54, 0.6); }
+  100% { box-shadow: inset 0 0 7vw rgba(255, 255, 127, 0.0); }
 }
 @keyframes errorBlink {
-    0% { box-shadow: inset 0 0 7vw rgba(255, 54, 54, 0.9); }
-    70% { box-shadow: inset 0 0 7vw rgba(255, 54, 54, 0.6); }
-    100% { box-shadow: inset 0 0 7vw rgba(255, 255, 127, 0.0); }
+  0% { box-shadow: inset 0 0 7vw rgba(255, 54, 54, 0.9); }
+  70% { box-shadow: inset 0 0 7vw rgba(255, 54, 54, 0.6); }
+  100% { box-shadow: inset 0 0 7vw rgba(255, 255, 127, 0.0); }
 }
 @font-face {
+    font-family: 'Roboto';
+    src: url('Roboto-BlackItalic.eot');
+    src: local('Roboto Black Italic'), local('Roboto-BlackItalic'),
+        url('Roboto-BlackItalic.eot?#iefix') format('embedded-opentype'),
+        url('Roboto-BlackItalic.woff2') format('woff2'),
+        url('Roboto-BlackItalic.woff') format('woff'),
+        url('Roboto-BlackItalic.ttf') format('truetype');
     font-weight: 900;
     font-style: italic;
 }
 
 @font-face {
+    font-family: 'Roboto';
+    src: url('Roboto-Bold.eot');
+    src: local('Roboto Bold'), local('Roboto-Bold'),
+        url('Roboto-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Roboto-Bold.woff2') format('woff2'),
+        url('Roboto-Bold.woff') format('woff'),
+        url('Roboto-Bold.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
+    font-family: 'Roboto';
+    src: url('Roboto-BoldItalic.eot');
+    src: local('Roboto Bold Italic'), local('Roboto-BoldItalic'),
+        url('Roboto-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('Roboto-BoldItalic.woff2') format('woff2'),
+        url('Roboto-BoldItalic.woff') format('woff'),
+        url('Roboto-BoldItalic.ttf') format('truetype');
     font-weight: bold;
     font-style: italic;
 }
 
 @font-face {
+    font-family: 'Roboto';
+    src: url('Roboto-LightItalic.eot');
+    src: local('Roboto Light Italic'), local('Roboto-LightItalic'),
+        url('Roboto-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('Roboto-LightItalic.woff2') format('woff2'),
+        url('Roboto-LightItalic.woff') format('woff'),
+        url('Roboto-LightItalic.ttf') format('truetype');
     font-weight: 300;
     font-style: italic;
 }
 
 @font-face {
+    font-family: 'Roboto';
+    src: url('Roboto-Regular.eot');
+    src: local('Roboto'), local('Roboto-Regular'),
+        url('Roboto-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Roboto-Regular.woff2') format('woff2'),
+        url('Roboto-Regular.woff') format('woff'),
+        url('Roboto-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
+    font-family: 'Roboto';
+    src: url('Roboto-ThinItalic.eot');
+    src: local('Roboto Thin Italic'), local('Roboto-ThinItalic'),
+        url('Roboto-ThinItalic.eot?#iefix') format('embedded-opentype'),
+        url('Roboto-ThinItalic.woff2') format('woff2'),
+        url('Roboto-ThinItalic.woff') format('woff'),
+        url('Roboto-ThinItalic.ttf') format('truetype');
     font-weight: 100;
     font-style: italic;
 }
 
 @font-face {
+    font-family: 'Roboto';
+    src: url('Roboto-Black.eot');
+    src: local('Roboto Black'), local('Roboto-Black'),
+        url('Roboto-Black.eot?#iefix') format('embedded-opentype'),
+        url('Roboto-Black.woff2') format('woff2'),
+        url('Roboto-Black.woff') format('woff'),
+        url('Roboto-Black.ttf') format('truetype');
     font-weight: 900;
     font-style: normal;
 }
 
 @font-face {
+    font-family: 'Roboto';
+    src: url('Roboto-MediumItalic.eot');
+    src: local('Roboto Medium Italic'), local('Roboto-MediumItalic'),
+        url('Roboto-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('Roboto-MediumItalic.woff2') format('woff2'),
+        url('Roboto-MediumItalic.woff') format('woff'),
+        url('Roboto-MediumItalic.ttf') format('truetype');
     font-weight: 500;
     font-style: italic;
 }
 
 @font-face {
+    font-family: 'Roboto';
+    src: url('Roboto-Thin.eot');
+    src: local('Roboto Thin'), local('Roboto-Thin'),
+        url('Roboto-Thin.eot?#iefix') format('embedded-opentype'),
+        url('Roboto-Thin.woff2') format('woff2'),
+        url('Roboto-Thin.woff') format('woff'),
+        url('Roboto-Thin.ttf') format('truetype');
     font-weight: 100;
     font-style: normal;
 }
 
 @font-face {
+    font-family: 'Roboto';
+    src: url('Roboto-Light.eot');
+    src: local('Roboto Light'), local('Roboto-Light'),
+        url('Roboto-Light.eot?#iefix') format('embedded-opentype'),
+        url('Roboto-Light.woff2') format('woff2'),
+        url('Roboto-Light.woff') format('woff'),
+        url('Roboto-Light.ttf') format('truetype');
     font-weight: 300;
     font-style: normal;
 }
 
 @font-face {
+    font-family: 'Roboto';
+    src: url('Roboto-Italic.eot');
+    src: local('Roboto Italic'), local('Roboto-Italic'),
+        url('Roboto-Italic.eot?#iefix') format('embedded-opentype'),
+        url('Roboto-Italic.woff2') format('woff2'),
+        url('Roboto-Italic.woff') format('woff'),
+        url('Roboto-Italic.ttf') format('truetype');
     font-weight: normal;
     font-style: italic;
 }
 
 @font-face {
+    font-family: 'Roboto';
+    src: url('Roboto-Medium.eot');
+    src: local('Roboto Medium'), local('Roboto-Medium'),
+        url('Roboto-Medium.eot?#iefix') format('embedded-opentype'),
+        url('Roboto-Medium.woff2') format('woff2'),
+        url('Roboto-Medium.woff') format('woff'),
+        url('Roboto-Medium.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
 }
 
 
 * {
-    font-size: 1.1rem;
+  font-size: 1.1rem;
 }
 
 html, body, .body, #root {
-    font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 .MuiButton-root {
-    text-transform: none !important;
+  text-transform: none !important;
 }
 /* Ползунок громкости */
 input[type=range] {
