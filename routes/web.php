@@ -13,15 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
-
+// ТЕСТ. Получить zip-архив
+/*
 Route::get('/zip/', function () {
-    return response()->download('/home/muratsalakhov/Загрузки/Desktop (2)/program.zip');
+    return response()->download('local-route-to-zip.zip');
 });
+*/
 
-// Выдача изображений
+// Получить изображение
 Route::get('/data/{id}/{name}', function ($id, $name) {
     $programPath = storage_path() . '/app/public/' . $id . '/';
 
