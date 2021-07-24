@@ -1,7 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Support\Facades\Redis;
+use App\Http\Controllers;
+use Illuminate\Support\Facades\Storage;
+use WebPConvert\WebPConvert;
+use App\Services\ImageConverter;
+use App\Services\ProgramHandler;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,24 +18,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// ТЕСТ. Получить zip-архив
-/*
-Route::get('/zip/', function () {
-    return response()->download('local-route-to-zip.zip');
+Route::get('/', function () {
+    return view('welcome');
 });
-*/
 
-// Получить изображение
-Route::get('/data/{id}/{name}', function ($id, $name) {
-    $programPath = storage_path() . '/app/public/' . $id . '/';
-
-    try {
-        return response(file_get_contents($programPath . 'images-webp/' . $name . '.webp'), 200)->header('Content-Type', 'image/webp');
-    } catch (Throwable $e) {}
-
-    try {
-        return response(file_get_contents($programPath . 'images-png/' . $name), 200)->header('Content-Type', 'image/png');
-    } catch (Throwable $e) {}
-
-    return response(array("status" => "File not found"), 404)->header('Content-Type', 'application/json');
-});
+// Выдача изображений
+Route::get('/data/{id}/{name}', [Controllers\ImageController::class, 'getImage']);
